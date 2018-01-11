@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="doseRate">
+   <head>
+      <title>Calculate Dose rates</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="js/doseRate.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js/doseRateController.js"></script>
+   </head>
+   <body background="js/bk.png">
+      <div class="container-div" ng-controller="doseRateController">
+<form>
+         <table class="table">
+            <tbody>
+               <tr>
+                  <td>
+                     <label>Calculation Type:</label>
+                  </td>
+                  <td>
+                     <select ng-model="calType">
+                        <option ng-repeat="key in calculationType">{{key}}</option>
+                     </select>
+                  </td>
+				   
+				   <td rowspan="5">
+				    <label>Radionuclide Input:</label>
+				  <div ng-repeat="name in fileNames">
+                     <input type="checkbox" name="stablity"/> {{name}}<br>
+				  </div>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label>Wind Speed:</label>
+                  </td>
+                  <td>
+                     <input type="number" name="second" ng-model="windSpeed" step="any" required>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label>Release Height:</label>
+                  </td>
+                  <td>
+                     <input type="number" name="first" ng-model="releaseHeight" step="any" required>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label>Stability Categories:</label>
+                  </td>
+                  <td>
+				  <div ng-repeat="cat in stablityCategories">
+                     <input type="checkbox" name="{{cat}}" ng-click="toggleStablitySelection(cat)"/> {{cat}}<br>
+				  </div>
+                  </td>
+               </tr>
+			   <tr>
+                  <td>
+                     <label>Downwind Distance:</label>
+                  </td>
+                  <td>
+					<div ng-repeat="dist in distances track by $index">
+						<input type="number"  value="{{dist}}" disabled>
+						<input type="submit" value="-" ng-click="remove($index)"><br>
+					</div>
+					<input type="number" ng-model="downwindDistance" step="any">
+					<input type="submit" value="+" ng-click="add()">
+                  </td>
+               </tr>
+               <tr>
+                  <td align="center" colspan="3"><input type="submit" value="Calculate" ng-click="calculate()"></td>
+               </tr>
+               <tr>
+                  <th colspan="3">Result: {{result}}</th>
+               </tr>
+            </tbody>
+         </table>
+		 </form>
+      </div>
+   </body>
+</html>
