@@ -1,9 +1,9 @@
-package com.radio.nuclies.doseRates.utils;
+package com.radio.nuclies.doseRates.evaluator;
 
-import static com.radio.nuclies.doseRates.utils.SigmaEvaluator.sigmaY;
-import static com.radio.nuclies.doseRates.utils.SigmaEvaluator.sigmaYS;
-import static com.radio.nuclies.doseRates.utils.SigmaEvaluator.sigmaYtibl;
-import static com.radio.nuclies.doseRates.utils.SigmaEvaluator.sigmaZ;
+import static com.radio.nuclies.doseRates.evaluator.SigmaEvaluator.sigmaY;
+import static com.radio.nuclies.doseRates.evaluator.SigmaEvaluator.sigmaYS;
+import static com.radio.nuclies.doseRates.evaluator.SigmaEvaluator.sigmaYtibl;
+import static com.radio.nuclies.doseRates.evaluator.SigmaEvaluator.sigmaZ;
 import static java.lang.Math.exp;
 import static java.lang.Math.sqrt;
 

@@ -2,7 +2,7 @@ package com.radio.nuclies.doseRates.handler;
 
 import static java.lang.Math.pow;
 
-import com.radio.nuclies.doseRates.utils.AttenuationCoefficientEvaluator;
+import com.radio.nuclies.doseRates.evaluator.AttenuationCoefficientEvaluator;
 
 public class DoseRateHandler {
 
@@ -57,10 +57,6 @@ public class DoseRateHandler {
 		w_e = 0.5 * u * A * A / tibl_ht0;
 
 		no_of_energy = flag;
-
-		// fprintf( out_file2,", ,Dose rate (microSv/hr)" );
-		// fprintf( out_file2,"\nStability Category, Downwind Distance
-		// (m),Energy(MeV)" );
 
 		for (int bb = 0; bb <= no_of_stcat - 1; bb++) {
 			stb = st_cat[bb];

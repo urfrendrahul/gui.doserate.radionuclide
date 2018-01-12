@@ -43,4 +43,11 @@ public class DoseRatesServiceImpl implements DoseRatesService {
 		return fileHandler.getFileNames(env.getProperty("nuclide.file.path"));
 	}
 
+	@Override
+	public double calculateDoseRate(CalculationType calculationType, double speed, double releaseHeight,
+			List<StablityCategories> categories, List<Double> distances) {
+		System.out.println(calculationType.name() +":"+ speed +":"+ releaseHeight +":"+ categories +":"+ distances);
+		return 0;
+	}
+
 }

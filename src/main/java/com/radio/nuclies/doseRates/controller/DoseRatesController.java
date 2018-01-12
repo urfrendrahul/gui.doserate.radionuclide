@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radio.nuclies.doseRates.constant.CalculationType;
+import com.radio.nuclies.doseRates.constant.StablityCategories;
 import com.radio.nuclies.doseRates.service.DoseRatesService;
 
 @CrossOrigin
@@ -37,8 +39,12 @@ public class DoseRatesController {
     }
 	
 	@RequestMapping(value = "/doseRates", method = GET, produces = APPLICATION_JSON_VALUE)
-    public Double getDoseRates(@RequestParam("calcType") String calculationType) {
-        return 4.0;
+    public Double calulateDoseRates(@RequestParam("calcType") CalculationType calculationType, 
+    								@RequestParam("categories") List<StablityCategories> categories,
+    								@RequestParam("speed") double speed,
+    								@RequestParam("height") double releaseHeight,
+    								@RequestParam("distances") List<Double> distances) {
+        return doseRatesService.calculateDoseRate(calculationType,speed,releaseHeight,categories,distances);
     }
 
 }

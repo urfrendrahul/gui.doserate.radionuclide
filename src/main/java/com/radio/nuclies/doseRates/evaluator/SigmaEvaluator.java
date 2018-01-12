@@ -1,6 +1,6 @@
-package com.radio.nuclies.doseRates.utils;
+package com.radio.nuclies.doseRates.evaluator;
 
-import static com.radio.nuclies.doseRates.utils.ReferenceData.sig;
+import static com.radio.nuclies.doseRates.evaluator.ReferenceData.sig;
 import static java.lang.Math.pow;
 
 public class SigmaEvaluator {

@@ -1,4 +1,4 @@
-package com.radio.nuclies.doseRates.utils;
+package com.radio.nuclies.doseRates.evaluator;
 
 import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;

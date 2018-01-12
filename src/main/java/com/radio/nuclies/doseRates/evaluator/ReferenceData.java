@@ -1,4 +1,4 @@
-package com.radio.nuclies.doseRates.utils;
+package com.radio.nuclies.doseRates.evaluator;
 
 public class ReferenceData {
 	
