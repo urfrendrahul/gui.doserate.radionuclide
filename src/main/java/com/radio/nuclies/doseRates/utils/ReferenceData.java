@@ -1,6 +1,8 @@
 package com.radio.nuclies.doseRates.utils;
 
 public class ReferenceData {
+	
+	public static final double PI = 22.0 / 7.0;
 
 	public static final double[][] sig = { { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 },
 			{ 0.3658, 0.192, 0.936, 0.0, 0.00066, 1.941, 9.27, 0.00024, 2.094, -9.6 },

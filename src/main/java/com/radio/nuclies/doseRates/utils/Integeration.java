@@ -1,6 +1,6 @@
 package com.radio.nuclies.doseRates.utils;
 
-import static com.radio.nuclies.doseRates.constant.DoseRateConstant.PI;
+import static com.radio.nuclies.doseRates.utils.ReferenceData.PI;
 import static com.radio.nuclies.doseRates.utils.LimitsEvaluator.yLimits;
 import static com.radio.nuclies.doseRates.utils.LimitsEvaluator.yLimitsSA;
 import static com.radio.nuclies.doseRates.utils.LimitsEvaluator.yLimitsSP;
@@ -13,7 +13,6 @@ import static com.radio.nuclies.doseRates.utils.SigmaEvaluator.sigmaZ;
 import static java.lang.Math.exp;
 import static java.lang.Math.sqrt;
 
-import com.radio.nuclies.doseRates.constant.DoseRateConstant;
 
 public class Integeration {
 
